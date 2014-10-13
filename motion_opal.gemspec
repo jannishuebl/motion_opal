@@ -11,11 +11,14 @@ spec = Gem::Specification.new do |s|
   s.files = `git ls-files`.split("
 ")
   s.require_paths << 'lib'
+  s.require_paths = ["lib"]
   s.has_rdoc = true
   s.extra_rdoc_files = ['README.rdoc','motion_opal.rdoc']
   s.rdoc_options << '--title' << 'motion_opal' << '--main' << 'README.rdoc' << '-ri'
   s.bindir = 'bin'
   s.executables << 'motion_opal'
+  s.add_dependency('thor', '~> 0.15')
+  s.add_development_dependency('pry', '~> 0.9.12')
   s.add_development_dependency('rake')
   s.add_development_dependency('rdoc')
   s.add_development_dependency('aruba')
