@@ -1,0 +1,6 @@
+= motion_opal
+
+Describe your project here
+
+:include:motion_opal.rdoc
+

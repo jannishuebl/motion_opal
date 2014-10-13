@@ -1,0 +1,5 @@
+= motion_opal
+
+Generate this with
+    motion_opal rdoc
+After you have described your command line interface
