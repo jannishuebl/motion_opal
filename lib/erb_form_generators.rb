@@ -1,15 +1,6 @@
 require 'motion_opal/version'
 require 'thor'
 
-class String
-  def underscore
-    self.gsub(/::/, '/').
-        gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
-        gsub(/([a-z\d])([A-Z])/,'\1_\2').
-        tr("-", "_").
-        downcase
-  end
-end
 module RubymotionGenerators
   class Core < Thor
     include Thor::Actions
@@ -17,15 +8,6 @@ module RubymotionGenerators
     desc "erb", "Generate a new file of the specified type"
 
     def erb(args)
-      template_name, name = args
-
-      case template_name
-      when 'form'
-         generate_form_view_controller name
-      else
-        puts "Invalid template name '#{template_name}'"
-        exit 1
-      end
     end
 
     private
